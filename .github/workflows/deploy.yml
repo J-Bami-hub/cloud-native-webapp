@@ -37,14 +37,3 @@ jobs:
 
       - name: Build Docker Container
         run: docker build -t cloud-native-webapp:latest .
-
-        build-docker:
-    name: Build Docker Image
-    needs: terraform-validate
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Build Docker Container
-        run: docker build -t cloud-native-webapp:latest .
